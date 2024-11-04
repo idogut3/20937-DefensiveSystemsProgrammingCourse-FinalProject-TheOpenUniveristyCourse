@@ -49,6 +49,13 @@ It will send a response with the CRC it got and the client will either confirm i
 
 The checkusm calculation, on the server And in the client, will be executed in the same way as the cksum command in Linux: /https://www.howtoforge.com/linux-cksum-command
 
+# A look into the development of the project
+
+## UML's I created for the server-side during the project's initial stages
+![UML's server-side](https://github.com/idogut3/20937-DefensiveSystemsProgrammingCourse-FinalProject-TheOpenUniveristyCourse/blob/main/images/UML%20classes%20used%20in%20the%20project's%20development-server-side.png)
+
+## UML's I created for the client-side during the project's initial stages
+![UML's client-side](https://github.com/idogut3/20937-DefensiveSystemsProgrammingCourse-FinalProject-TheOpenUniveristyCourse/blob/main/images/UML%20classes%20used%20in%20the%20project's%20development-client-side.png)
 
 
 
