@@ -4,6 +4,8 @@
   
 Essentially there are 3 major "protocols" that operate with each other in the project, a Registration protocol, a Reconnection protocol and a SendFile protocol.
 
+[Video for showcasing the project](https://drive.google.com/file/d/1rvdHS-tQpMWXrNozavQi8TW145cvzeQ8/view?usp=sharing)
+
 # Registration protocol
 
 ![Registration protocol diagram](https://github.com/idogut3/20937-DefensiveSystemsProgrammingCourse-FinalProject-TheOpenUniveristyCourse/blob/main/images/Reconnection.png)
