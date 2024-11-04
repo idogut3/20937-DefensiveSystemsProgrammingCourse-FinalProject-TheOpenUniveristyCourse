@@ -27,8 +27,9 @@ While the registration protocol operates the client creates to himself (for futu
 ![Registration protocol diagram](https://github.com/idogut3/20937-DefensiveSystemsProgrammingCourse-FinalProject-TheOpenUniveristyCourse/blob/main/images/Reconnection.png)
 
 # Reconnection protocol
-If the requested username doesn't exists, the server will try and register the user with the Registration protocol. Otherwise, the server will send the client a reconnection success response with the username of the client. 
-Then it will generate an AES key which will be encrypted with the client's public key and sent back to the client (If for some reason the client doesn't have a public key - the server will responed with a general error message to the client).
+If the requested username doesn't exists, the server will try and register the user with the Registration protocol.
+Otherwise, the server will send the client a reconnection success response with the username of the client. 
+It (the server) will generate an AES key which will be encrypted with the client's public key and sent back to the client (If for some reason the client doesn't have a public key - the server will responed with a general error message to the client).
 The client who receives the encrypted aes key decrypts the it, and now will use the aes key to encrypt new messages (and files) it will send to the server.
 
 ![Reconnection protocol diagram](https://github.com/idogut3/20937-DefensiveSystemsProgrammingCourse-FinalProject-TheOpenUniveristyCourse/blob/main/images/Registration.png)
