@@ -29,13 +29,17 @@ The client who receives it decrypts the encrypted aes key, and now will use the 
 # SendFile protocol
 
 When the user wants to send the server a file, it first has to register to the server or reconnect to it (with the correct uuid that exists in the server's database).
-After being signed in the user can try to send the file in packets 
-third. Message with encrypted file: The server will decrypt the encrypted file using the original AES key sent
-to that customer, and will calculate the CRC (which is the value obtained from the checksum operation). The calculation, on the server
-And in the client, it should be executed in the same way as the cksum command in Linux:
- /https://www.howtoforge.com/linux-cksum-command
-In Unit 7 tab you can find a code for calculating checksum and use it.
-d. The server will receive a success message from the client (CRC verified) or resend the file up to 3 times.
+After being signed in the user can try to send the file in packets (in a loop until we sent all the packets) (which will be encrypted with the aes given by the server in the Registration protocol or the Reconnection protocol.
+Each packet will have a header and a payload, a sendFile packet will look like this - where the request code will be 828 (SendFile_Request_Code):
+
+![RequestHeader](https://github.com/idogut3/20937-DefensiveSystemsProgrammingCourse-FinalProject-TheOpenUniveristyCourse/blob/main/images/RequestHeader.png)
+![SendFileRequestPayload](https://github.com/idogut3/20937-DefensiveSystemsProgrammingCourse-FinalProject-TheOpenUniveristyCourse/blob/main/images/SendFilePayload.png)
+
+The server will decrypt the encrypted file using the original AES key it sent to that client, and will calculate the CRC (which is the value obtained from the checksum operation).
+It will send a response with the CRC it got and the client will either confirm it is the right checksum value (and send a "send file success" message), Or deny it and will send a request-message saying the CRC is wrong and will try to send the file again 3 more times until it has succeeded or failed for the fourth time.
+
+The checkusm calculation, on the server And in the client, will be executed in the same way as the cksum command in Linux: /https://www.howtoforge.com/linux-cksum-command
+
 
 
 
