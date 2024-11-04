@@ -1,10 +1,16 @@
 ﻿# A Little about the project
   This is a project I have done as part of my university course.
-  It is a client-server application that communicates with each other. The client-side is written in Cpp and the server-side is in Python.
+  It is a client-server application that communicates under a tcp connection. The client-side is written in Cpp and the server-side is in Python.
+  Each user needs to register or reconnect to the server and only then he can send files to the server. Each file he sends is encrypted with an AES key and decrypted by the server. The client get's the AES key as part of the 3 way handshake process that uses the RSA     
+  asymmetric encryption algorithm.
   
 Essentially there are 3 major "protocols" that operate with each other in the project, a Registration protocol, a Reconnection protocol and a SendFile protocol.
 
 [Video for showcasing the project](https://drive.google.com/file/d/1rvdHS-tQpMWXrNozavQi8TW145cvzeQ8/view?usp=sharing)
+
+#### Libraries used:
+##### - pycryptodome (Python)
+##### - asio boost (Cpp)
 
 # Overview of Server's Functionality
 The server reads his port from the file "info.port"  (If the file does not exist, it issues a warning and work on the port default: 1256.
