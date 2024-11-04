@@ -7,10 +7,13 @@ Essentially there are 3 major "protocols" that operate with each other in the pr
 [Video for showcasing the project](https://drive.google.com/file/d/1rvdHS-tQpMWXrNozavQi8TW145cvzeQ8/view?usp=sharing)
 
 # Overview of Server's Functionality
-The server reads his port from the file info.port  (If the file does not exist, it issues a warning and work on the port default: 1256.
+The server reads his port from the file "info.port"  (If the file does not exist, it issues a warning and work on the port default: 1256.
 It waits for requests from clients in an endless loop, when it receives a request, it deciphers the request and operates based on the request code it extracts from the request's header.
 
 # Overview of the Client's operations:
+The client reades from the file "transfer.info" the server address, the port, the username, and the file path of the file we want to send.
+It then checks if the file "me.info" exists - if the file exists it initiates the reconnection protocol with the username, uuid and the private key it extracts from the file.
+If the file doesnt exist, it initiates the Registration protocol.
 
 ![client-side-actions](https://github.com/idogut3/20937-DefensiveSystemsProgrammingCourse-FinalProject-TheOpenUniveristyCourse/blob/main/images/client-side-actions.png)
 
@@ -19,6 +22,7 @@ It waits for requests from clients in an endless loop, when it receives a reques
 If the requested username already exists, the server will return an error, send a general error response to the client. Otherwise, the server will generate a new UUID for the user, save the data in memory (in the database) and return a registration success response with the new uuid of the client's.
 After that, the server waits for the client's public key request-message and when it gets it, the server updates it in it's database. In response, the server will generate an AES key, which will be encrypted with the client's public key and sent back to the client.
 The client who receives it decrypts the encrypted aes key, and now will use the aes key to encrypt new messages (and files) it will send to the server.
+While the registration protocol operates the client creates to himself (for future use in the reconnection protocol) a me.info file that contains the username, uuid and the private key it gets/generates in the process. 
 
 ![Registration protocol diagram](https://github.com/idogut3/20937-DefensiveSystemsProgrammingCourse-FinalProject-TheOpenUniveristyCourse/blob/main/images/Reconnection.png)
 
