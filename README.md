@@ -59,7 +59,7 @@ Each packet will have a header and a payload, a sendFile packet will look like t
 The server will decrypt the encrypted file using the original AES key it sent to that client, and will calculate the CRC (which is the value obtained from the checksum operation).
 It will send a response with the CRC it got and the client will either confirm it is the right checksum value (and send a "send file success" message), Or deny it and will send a request-message saying the CRC is wrong and will try to send the file again 3 more times until it has succeeded or failed for the fourth time.
 
-The checkusm calculation, on the server And in the client, will be executed in the same way as the cksum command in Linux: /https://www.howtoforge.com/linux-cksum-command
+The checkusm calculation, on the server and in the client, will be executed in the same way as the cksum command in Linux: /https://www.howtoforge.com/linux-cksum-command
 
 # A look into the development of the project
    When I began, I started by creating myself uml's to help me envision the project's structure that I will later use and add to during the development stages of the project. Here are some of them I created:
