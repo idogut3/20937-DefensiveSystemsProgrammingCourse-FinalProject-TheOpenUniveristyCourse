@@ -16,6 +16,12 @@ Essentially there are 3 major "protocols" that operate with each other in the pr
 The server reads his port from the file "info.port"  (If the file does not exist, it issues a warning and work on the port default: 1256.
 It waits for requests from clients in an endless loop, when it receives a request, it deciphers the request and operates based on the request code it extracts from the request's header.
 
+### A server's response message is in this format
+![server-response](https://github.com/idogut3/20937-DefensiveSystemsProgrammingCourse-FinalProject-TheOpenUniveristyCourse/blob/main/images/ServerResponse.png)
+
+### A client's request message is in this format
+![client-request](https://github.com/idogut3/20937-DefensiveSystemsProgrammingCourse-FinalProject-TheOpenUniveristyCourse/blob/main/images/ClientRequest.png)
+
 # Overview of the Client's operations:
 The client reades from the file "transfer.info" the server address, the port, the username, and the file path of the file we want to send.
 It then checks if the file "me.info" exists - if the file exists it initiates the reconnection protocol with the username, uuid and the private key it extracts from the file.
