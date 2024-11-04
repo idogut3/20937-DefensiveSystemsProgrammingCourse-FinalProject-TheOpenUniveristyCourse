@@ -24,6 +24,7 @@ After that, the server waits for the client's public key request-message and whe
 The client who receives it decrypts the encrypted aes key, and now will use the aes key to encrypt new messages (and files) it will send to the server.
 While the registration protocol operates the client creates to himself (for future use in the reconnection protocol) a me.info file that contains the username, uuid and the private key it gets/generates in the process. 
 
+
 ![Registration protocol diagram](https://github.com/idogut3/20937-DefensiveSystemsProgrammingCourse-FinalProject-TheOpenUniveristyCourse/blob/main/images/Reconnection.png)
 
 # Reconnection protocol
