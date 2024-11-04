@@ -32,7 +32,7 @@ The client who receives the encrypted aes key decrypts the it, and now will use 
 # SendFile protocol
 
 When the user wants to send the server a file, it first has to register to the server or reconnect to it (with the correct uuid that exists in the server's database).
-After being signed in the user can try to send the file in packets (in a loop until we sent all the packets) (which will be encrypted with the aes given by the server in the Registration protocol or the Reconnection protocol.
+After being signed in the user can try to send the file in packets, with a loop until we sent all the packets (each packet will of course be encrypted with the aes key given by the server in the Registration protocol or the Reconnection protocol.
 Each packet will have a header and a payload, a sendFile packet will look like this - where the request code will be 828 (SendFile_Request_Code):
 
 ![RequestHeader](https://github.com/idogut3/20937-DefensiveSystemsProgrammingCourse-FinalProject-TheOpenUniveristyCourse/blob/main/images/RequestHeader.png)
