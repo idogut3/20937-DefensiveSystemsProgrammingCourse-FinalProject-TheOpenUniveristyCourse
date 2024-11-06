@@ -10,8 +10,8 @@ Essentially there are 3 major "protocols" that operate with each other in the pr
 
 #### Libraries used:
 ##### - PyCryptodome (Python)
-##### - Asio Boost (Cpp)
 ##### - Crypto++/CryptoPP (Cpp)
+##### - Asio Boost (Cpp)
 
 # Overview of Server's Functionality
 The server reads his port from the file "info.port"  (If the file does not exist, it issues a warning and work on the port default: 1256.
