@@ -3,10 +3,10 @@
   It is a client-server application that communicates under a tcp connection. The client-side is written in Cpp and the server-side is in Python.
   Each user needs to register or reconnect to the server and only then he can send files to the server. Each file he sends is encrypted with an AES key and decrypted by the server. The client get's the AES key as    part of the 3 way handshake process that uses the RSA     
   asymmetric encryption algorithm. 
-  
-  For those wondering why do we change from the RSA-based asymmetric encryption algorithm to the AES (Advanced Encryption Standard) symmetric encryption algorithm we do it       
-  because AES is much faster and more efficient for encrypting large amounts of data. While RSA is great for secure key exchange, it’s slower for bulk encryption. AES uses a shared key for both encryption and     
-  decryption, making it more suitable for handling large files and data streams efficiently.
+
+  ###### Why switch from RSA-based asymmetric encryption algorithm to the AES (Advanced Encryption Standard)?
+  For those wondering why do we change from the RSA-based asymmetric encryption algorithm to the AES symmetric encryption algorithm, we do it because AES is much faster and more efficient for encrypting large   
+  amounts of data. RSA uses a lot of computation power, while AES is much less computationally intensive. 
   
 Essentially there are 3 major "protocols" that operate with each other in the project, a Registration protocol, a Reconnection protocol and a SendFile protocol.
 
