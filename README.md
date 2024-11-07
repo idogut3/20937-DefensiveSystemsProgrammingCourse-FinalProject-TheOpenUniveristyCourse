@@ -11,7 +11,7 @@
   amounts of data. RSA uses a lot of computation power, while AES is much less computationally intensive. 
   
 
-[Video for showcasing the project](https://drive.google.com/file/d/1rvdHS-tQpMWXrNozavQi8TW145cvzeQ8/view?usp=sharing)
+[Video for showcasing the project (in hebrew)](https://drive.google.com/file/d/1rvdHS-tQpMWXrNozavQi8TW145cvzeQ8/view?usp=sharing)
 
 #### Libraries used:
 ##### - PyCryptodome (Python)
