@@ -4,7 +4,7 @@
   Each user needs to register or reconnect to the server and only then he can send files to the server. Each file he sends is encrypted with an AES key and decrypted by the server. The client get's the AES key as    part of the 3 way handshake process that uses the RSA     
   asymmetric encryption algorithm. 
 
-  #### Why switch from RSA-based asymmetric encryption algorithm to the AES (Advanced Encryption Standard)?
+  #### ***Why switch from RSA-based asymmetric encryption algorithm to the AES (Advanced Encryption Standard)?***
   For those wondering why do we change from the RSA-based asymmetric encryption algorithm to the AES symmetric encryption algorithm, we do it because AES is much faster and more efficient for encrypting large   
   amounts of data. RSA uses a lot of computation power, while AES is much less computationally intensive. 
   
