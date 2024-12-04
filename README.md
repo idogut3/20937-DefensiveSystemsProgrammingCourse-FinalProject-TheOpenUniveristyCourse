@@ -43,7 +43,7 @@ The client who receives it decrypts the encrypted aes key, and now will use the 
 While the registration protocol operates the client creates to himself (for future use in the reconnection protocol) a me.info file that contains the username, uuid and the private key it gets/generates in the process. 
 
 
-![Registration protocol diagram](https://github.com/idogut3/20937-DefensiveSystemsProgrammingCourse-FinalProject-TheOpenUniveristyCourse/blob/main/images/Reconnection.png)
+![Registration protocol diagram](https://github.com/idogut3/20937-DefensiveSystemsProgrammingCourse-FinalProject-TheOpenUniveristyCourse/blob/main/images/Registration.png)
 
 # Reconnection protocol
 If the requested username doesn't exists, the server will try and register the user with the Registration protocol.
@@ -51,7 +51,7 @@ Otherwise, the server will send the client a reconnection success response with 
 It (the server) will generate an AES key which will be encrypted with the client's public key and sent back to the client (If for some reason the client doesn't have a public key - the server will responed with a general error message to the client).
 The client who receives the encrypted aes key decrypts the it, and now will use the aes key to encrypt new messages (and files) it will send to the server.
 
-![Reconnection protocol diagram](https://github.com/idogut3/20937-DefensiveSystemsProgrammingCourse-FinalProject-TheOpenUniveristyCourse/blob/main/images/Registration.png)
+![Reconnection protocol diagram](https://github.com/idogut3/20937-DefensiveSystemsProgrammingCourse-FinalProject-TheOpenUniveristyCourse/blob/main/images/Reconnection.png)
 
 # SendFile protocol
 
