@@ -1,4 +1,4 @@
-﻿# A Little about the project
+﻿# A Little about the project 💻🌐📲
   This is a project I have done as part of my university course.
   It is a client-server application that communicates under a tcp connection. The client-side is written in Cpp and the server-side is in Python.
   Each user needs to register or reconnect to the server and only then he can send files to the server. Each file he sends is encrypted with an AES key and decrypted by the server. The client get's the AES key as    part of the 3 way handshake process that uses the RSA     
